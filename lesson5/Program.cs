@@ -103,34 +103,6 @@ Console.WriteLine();
 // элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
 
 
-/*
-
-{
-    int l = array.Length;
-    int c = l/2;
-    
-    {
-        for (int i = 0; i < l-1; i++)
-        {
-            
-            array[i] = massiv[i]+massiv[l-1];
-            l = l-1;
-        }
-
-    }
-    
-    else 
-    {
-        
-       for (int i = 0; i < l-1; i++)
-        {
-            
-            array[i] = 
-        }
-
-
-    }
- }   */
 int[] massiv;
 int l = new Random().Next(5, 15);
 massiv = new int[l];
@@ -146,9 +118,7 @@ int length=1;
 int a = l/2+length;
 array = new int[a];
 if (l/2 == 0) length =0;
-
   
-
     for (int i = 0; i < a; i++)
     {
         array[i] = massiv[i]*massiv[l-i-1];
