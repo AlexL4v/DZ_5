@@ -35,9 +35,7 @@ Array();
         n[i] = new Random().Next(-9,10);
         
         Console.Write(n[i] + " ");
-        
-
-          
+                
     }
     Console.WriteLine();
     for (int i = 0; i < 12; i++)
@@ -104,22 +102,13 @@ Console.WriteLine();
 // Задача 5 Найдите произведение пар чисел в одномерном массиве. Парой считаем первый и последний 
 // элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
 
-int[] massiv;
-int l = new Random().Next(5, 15);
-massiv = new int[l]; 
-   
-  
-    for (int i = 0; i < l; i++)
-    {
-        massiv[i] = new Random().Next(1,100);
-        Console.Write(massiv[i] + " ");
-    }
-    Console.WriteLine();
-int sum (int[] array)
+
+/*
+
 {
     int l = array.Length;
     int c = l/2;
-    if (c == 0)
+    
     {
         for (int i = 0; i < l-1; i++)
         {
@@ -136,14 +125,36 @@ int sum (int[] array)
        for (int i = 0; i < l-1; i++)
         {
             
-            array[i] = massiv[i]+massiv[l-1];
-            l = l-1;
+            array[i] = 
         }
 
 
     }
-
+ }   */
+int[] massiv;
+int l = new Random().Next(5, 15);
+massiv = new int[l];
+for (int i = 0; i < l; i++) 
+{
+    massiv[i] = new Random().Next(1,100);  
+    Console.Write(massiv[i] + " ");      
     
+}   
+Console.WriteLine(); 
+int[] array;
+int length=1;
+int a = l/2+length;
+array = new int[a];
+if (l/2 == 0) length =0;
 
+  
+
+    for (int i = 0; i < a; i++)
+    {
+        array[i] = massiv[i]*massiv[l-i-1];
+        
+        if(i == l-i-1) array[i] = massiv[i];
+        Console.Write(array[i] + " ");
+    }   
 
 
