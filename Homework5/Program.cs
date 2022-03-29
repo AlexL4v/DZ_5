@@ -47,10 +47,11 @@ for (int i = 0; i < l; i++)
 }
 
 Console.WriteLine($"Сумма элементов, стоящих на нечетных позициях в массиве {sum}");
-*/
+
 // Задача 3: Задайте массив вещественных чисел.
 // Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
+// Вариант 1 тип int
 Console.WriteLine("Введите число в диапазоне от 5 до 10 ");
 
 int l = Convert.ToInt32(Console.ReadLine()); 
@@ -88,4 +89,43 @@ else
         Console.WriteLine("min = " + (min));
         Console.WriteLine("Разница " + (max - min));
 }   
+*/
 
+// 2 вариант тип double
+Console.WriteLine("Введите число в диапазоне от 5 до 10 ");
+
+int l = Convert.ToInt32(Console.ReadLine()); 
+if (l<5 || l>10) 
+{
+    Console.WriteLine("Заданное число не сооветсвует условиям ");
+    
+} 
+else 
+{
+    double[] arr;
+    arr = new double[l];
+    for (int i = 0; i < l; i++) 
+    {
+        arr[i] = new Random().NextDouble();  
+        Console.Write(arr[i] + " ");      
+    
+    }   
+    Console.WriteLine();
+    double max = arr[l-1];
+    double min = arr[l-1];
+    for (int i = 0; i < l; i++) 
+    {   
+        if (arr[i] > max) 
+        {
+            max = arr[i];
+        }
+        if (arr[i]< min)
+        {
+            min = arr[i];
+        }
+        
+    }
+        Console.WriteLine("max = " + (max));
+        Console.WriteLine("min = " + (min));
+        Console.WriteLine("Разница " + (max - min));
+} 
